@@ -1,4 +1,8 @@
 nav {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: var(--color-background);
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -11,6 +15,10 @@ nav {
     & a {
       position: relative;
       color: var(--color-font);
+    }
+
+    & a.active {
+      font-weight: 600;
     }
 
     & a::before {
@@ -36,6 +44,21 @@ nav {
 
     & img {
       width: 68px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 20px 16px;
+
+    & .right {
+      gap: 20px;
+      font-size: 14px;
+    }
+
+    & .left img {
+      width: 48px;
     }
   }
 }

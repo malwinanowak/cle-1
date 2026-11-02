@@ -17,6 +17,7 @@ body {
   background-color: var(--color-background);
   color: var(--color-font);
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -62,9 +63,9 @@ section {
   padding-top: 100px;
 }
 
-/* header section {
+header section {
   padding-top: 50px;
-} */
+}
 
 .wrapper {
   width: calc(100% - 40px);
@@ -72,19 +73,63 @@ section {
   margin-inline: auto;
 }
 
-header .container {
-  display: flex;
+.btn {
+  display: inline-flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 60px;
+  gap: 8px;
+  background-color: var(--color-button);
+  color: var(--color-background);
+  padding: 12px 24px;
+  border-radius: 20px;
+  font-size: 14px;
+  border: 1px solid transparent;
+  transition: 0.3s;
 }
 
-header .container h1 {
-  max-width: 450px;
+.btn:hover {
+  background-color: transparent;
+  border-color: var(--color-button);
+  color: var(--color-button);
 }
 
-header .container p {
-  max-width: 530px;
+.hero .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+.hero h1 {
+  max-width: 800px;
+  font-size: clamp(2.5rem, 6vw, 4.25rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.hero p {
+  max-width: 600px;
+  font-size: 1.125rem;
+}
+
+.hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-button);
+  border-color: var(--color-button);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-button);
+  color: var(--color-background);
 }
 
 .gallery-section {
@@ -175,17 +220,39 @@ main .information {
     padding: 55px 0;
   }
 
+  & .container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+
+  & .container > p {
+    max-width: 700px;
+  }
+
   & a {
     background-color: var(--color-button);
     color: var(--color-background);
   }
 
+  & a:hover {
+    background-color: transparent;
+    color: var(--color-button);
+  }
+
   & .usp-container {
     display: flex;
+    align-items: center;
+    flex-wrap: wrap;
     gap: 50px;
+    margin-top: 40px;
 
     & hr {
-      width: 3;
+      width: 1px;
+      height: 40px;
+      border: none;
+      background-color: var(--color-font);
       opacity: 0.3;
     }
 
@@ -201,7 +268,146 @@ main .information {
   }
 }
 
-/* Mobiel */
+/* ---------- Sectietitels ---------- */
+.section-title {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 40px;
+}
+
+/* ---------- Stappen & features ---------- */
+.steps-grid,
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.step,
+.card {
+  background-color: var(--color-background-opacity);
+  border-radius: 20px;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.step:hover,
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(74, 52, 40, 0.12);
+}
+
+.step-number {
+  width: 44px;
+  height: 44px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background-color: var(--color-button);
+  color: var(--color-background);
+  font-weight: 600;
+}
+
+main .features {
+  background-color: var(--color-background-opacity);
+  margin-top: 100px;
+  padding: 80px 0;
+}
+
+main .features .card {
+  background-color: var(--color-background);
+}
+
+.card img {
+  width: 44px;
+}
+
+/* ---------- Call-to-action ---------- */
+.cta {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.cta-box {
+  background-color: var(--color-button);
+  border-radius: 28px;
+  padding: 60px 40px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.cta-box h2 {
+  color: var(--color-background);
+}
+
+.cta-box p {
+  color: #e4d5c3;
+  max-width: 500px;
+}
+
+.cta-box .btn {
+  background-color: var(--color-background);
+  color: var(--color-button);
+  margin-top: 8px;
+}
+
+.cta-box .btn:hover {
+  background-color: transparent;
+  border-color: var(--color-background);
+  color: var(--color-background);
+}
+
+/* ---------- Footer ---------- */
+footer {
+  border-top: 1px solid rgba(41, 39, 35, 0.12);
+  padding: 40px 0;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.footer-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-brand img {
+  width: 48px;
+}
+
+.footer-links {
+  display: flex;
+  gap: 32px;
+}
+
+.footer-links a {
+  color: var(--color-font);
+  font-size: 14px;
+}
+
+/* ---------- Tablet ---------- */
+@media (max-width: 1100px) {
+  main .introduction .wrapper {
+    gap: 60px;
+  }
+}
+
+/* ---------- Mobiel ---------- */
 @media (max-width: 768px) {
   section {
     padding-top: 60px;
@@ -211,19 +417,12 @@ main .information {
     width: calc(100% - 32px);
   }
 
-  header .container {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 20px;
+  .hero {
+    padding-top: 40px;
   }
 
-  header .container h1 {
-    max-width: 100%;
-    font-size: 2rem;
-  }
-
-  header .container p {
-    max-width: 100%;
+  .hero p {
+    font-size: 1rem;
   }
 
   .gallery-section {
@@ -239,10 +438,64 @@ main .information {
     width: 220px;
     height: 125px;
   }
+
+  main .introduction .wrapper {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  main .introduction img {
+    max-width: 100%;
+  }
+
+  main .information .usp-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    margin-top: 24px;
+  }
+
+  main .information .usp-container hr {
+    display: none;
+  }
+
+  .steps-grid,
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  main .features {
+    margin-top: 60px;
+    padding: 50px 0;
+  }
+
+  .cta {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .cta-box {
+    padding: 40px 24px;
+  }
+
+  .footer-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
   .mySwiper .swiper-slide {
     transition: none;
+  }
+
+  .step,
+  .card {
+    transition: none;
+  }
+
+  .step:hover,
+  .card:hover {
+    transform: none;
   }
 }

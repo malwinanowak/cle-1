@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="nl">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -35,12 +35,12 @@
       </div>
       <div class="right">
         <a href="#">Handleiding</a>
-        <a href="#">Home</a>
-        <a href="#">Contact</a>
+        <a href="#" class="active" aria-current="page">Home</a>
+        <a href="contact.html">Contact</a>
       </div>
     </nav>
     <header>
-      <section>
+      <section class="hero">
         <div class="wrapper">
           <div class="container">
             <h1>Maak kennis met Rollix.</h1>
@@ -49,6 +49,10 @@
               innovatie samenbrengt. Experimenteer met ledverlichting,
               programmeren en eindeloze mogelijkheden.
             </p>
+            <div class="hero-actions">
+              <a href="#" class="btn">Bekijk de handleiding</a>
+              <a href="#steps" class="btn btn-outline">Hoe werkt het?</a>
+            </div>
           </div>
         </div>
       </section>
@@ -76,7 +80,7 @@
             <div class="swiper-slide">
               <img
                 src="img/Screenshot 2026-10-28 at 13.18.27.png"
-                alt="Rollix op tafel naast een latop"
+                alt="Rollix op tafel naast een laptop"
               />
             </div>
             <div class="swiper-slide">
@@ -118,7 +122,7 @@
             <div class="swiper-slide">
               <img
                 src="img/Screenshot 2026-10-28 at 13.18.27.png"
-                alt="Rollix op tafel naast een latop"
+                alt="Rollix op tafel naast een laptop"
               />
             </div>
             <div class="swiper-slide">
@@ -139,9 +143,6 @@
                 alt="Meisje aan het werk terwijl Rollix naast haar staat"
               />
             </div>
-          </div>
-          <div class="button">
-            <a href="#">Ondek meer</a>
           </div>
         </div>
       </section>
@@ -174,6 +175,7 @@
           </div>
         </div>
       </section>
+
       <section class="information">
         <div class="bg">
           <div class="wrapper">
@@ -187,10 +189,7 @@
                 komen, hun aandacht erbij te houden en hun schoolwerk stap voor
                 stap af te ronden.
               </p>
-              <a href="#"
-                >Bekijk de handleiding
-                <img src="img/keyboard_arrow_up.svg" alt="Pijltje"
-              /></a>
+              <a href="#" class="btn">Bekijk de handleiding </a>
               <div class="usp-container">
                 <div class="usp">
                   <img src="img/focus.svg" alt="Focus logo" />
@@ -211,7 +210,90 @@
           </div>
         </div>
       </section>
+
+      <section class="steps" id="steps">
+        <div class="wrapper">
+          <div class="section-title">
+            <p>Hoe werkt het</p>
+            <h2>In drie stappen aan de slag.</h2>
+          </div>
+          <div class="steps-grid">
+            <article class="step">
+              <span class="step-number">1</span>
+              <h4>Stel je timer in</h4>
+              <p>Kies hoe lang je wilt focussen en zet Rollix naast je neer.</p>
+            </article>
+            <article class="step">
+              <span class="step-number">2</span>
+              <h4>Werk geconcentreerd</h4>
+              <p>De ledverlichting laat zien hoeveel tijd er nog over is.</p>
+            </article>
+            <article class="step">
+              <span class="step-number">3</span>
+              <h4>Neem een pauze</h4>
+              <p>
+                Rollix rijdt en geeft geluid zodra het tijd is voor een break.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="features">
+        <div class="wrapper">
+          <div class="section-title">
+            <p>Features</p>
+            <h2>Alles wat Rollix kan.</h2>
+          </div>
+          <div class="features-grid">
+            <article class="card">
+              <img src="img/focus.svg" alt="" />
+              <h4>Slimme timer</h4>
+              <p>Met beweging en geluid blijf je op koers.</p>
+            </article>
+            <article class="card">
+              <img src="img/interest.svg" alt="" />
+              <h4>Programmeerbaar</h4>
+              <p>Pas het gedrag van Rollix zelf aan en leer coderen.</p>
+            </article>
+            <article class="card">
+              <img src="img/fire.svg" alt="" />
+              <h4>Ledverlichting</h4>
+              <p>Kies je eigen kleuren en effecten.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta">
+        <div class="wrapper">
+          <div class="cta-box">
+            <h2>Klaar om te beginnen?</h2>
+            <p>
+              Bekijk de handleiding en ontdek wat je allemaal met Rollix kunt
+              doen.
+            </p>
+            <a href="#" class="btn">Bekijk de handleiding</a>
+          </div>
+        </div>
+      </section>
     </main>
+
+    <footer>
+      <div class="wrapper footer-inner">
+        <div class="footer-brand">
+          <img src="img/Rollix.png" alt="Rollix logo" />
+          <p>Rollix</p>
+        </div>
+        <div class="footer-links">
+          <a href="#">Handleiding</a>
+          <a href="#">Home</a>
+          <a href="#">Contact</a>
+        </div>
+        <p class="copyright">© 2026 Rollix</p>
+      </div>
+    </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
     <script>
       const swiper = new Swiper(".mySwiper", {

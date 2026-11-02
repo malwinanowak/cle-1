@@ -1,0 +1,134 @@
+.contact-hero {
+  background-color: var(--color-background-opacity);
+  padding: 50px 0;
+
+  & .breadcrumb {
+    font-size: 0.75rem;
+    margin-bottom: 10px;
+  }
+}
+
+.contact {
+  padding: 75px 0;
+
+  & .contact-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+  }
+
+  & h2 {
+    margin-bottom: 12px;
+  }
+
+  & p {
+    font-size: 0.875rem;
+  }
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  flex: 1;
+
+  & h2 {
+    max-width: 24rem;
+  }
+
+  & .info-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
+  & .icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background-color: var(--color-background-opacity);
+    color: var(--color-button);
+  }
+
+  & .info-tekst h5 {
+    font-weight: 600;
+    color: var(--color-font);
+  }
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  flex: 1;
+
+  & .form-rij {
+    display: flex;
+    gap: 16px;
+
+    & input {
+      flex: 1;
+      min-width: 0;
+    }
+  }
+
+  & input,
+  & textarea {
+    width: 100%;
+    padding: 14px 16px;
+    font-family: inherit;
+    font-size: 0.875rem;
+    color: var(--color-font);
+    background-color: transparent;
+    border: 1px solid var(--color-button);
+    border-radius: 20px;
+
+    &::placeholder {
+      color: var(--color-small-text);
+    }
+
+    &:focus {
+      outline: 2px solid var(--color-button);
+      outline-offset: 2px;
+    }
+  }
+
+  & textarea {
+    min-height: 160px;
+    resize: vertical;
+  }
+
+  & button {
+    align-self: flex-start;
+    padding: 12px 24px;
+    font-family: inherit;
+    font-size: 14px;
+    color: var(--color-background);
+    background-color: var(--color-button);
+    border: 1px solid transparent;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: transparent;
+      border-color: var(--color-button);
+      color: var(--color-button);
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .contact .contact-layout {
+    flex-direction: column;
+  }
+
+  .contact-form .form-rij {
+    flex-direction: column;
+  }
+}
