@@ -1,0 +1,41 @@
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 31px 42px;
+
+  & .right {
+    display: flex;
+    gap: 60px;
+
+    & a {
+      position: relative;
+      color: var(--color-font);
+    }
+
+    & a::before {
+      content: "";
+      height: 1px;
+      width: 0%;
+      background-color: var(--color-font);
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      transition: 0.3s;
+      color: var(--color-font);
+    }
+
+    & a:hover::before {
+      width: 100%;
+    }
+  }
+
+  & .left {
+    display: flex;
+    align-items: center;
+
+    & img {
+      width: 68px;
+    }
+  }
+}
